@@ -14,7 +14,7 @@ args = parser.parse_args()
 
 geckodriver_path = args.geckodriver or shutil.which("geckodriver")
 if not geckodriver_path:
-    raise SystemExit("geckodriver not found. Install it (e.g. sudo apt install firefox-geckodriver) or pass --geckodriver /path/to/geckodriver")
+    raise SystemExit("geckodriver not found. Download it from https://github.com/mozilla/geckodriver/releases/ or pass --geckodriver /path/to/geckodriver")
 
 
 
