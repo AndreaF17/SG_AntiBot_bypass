@@ -1,6 +1,7 @@
 import requests
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 import time
 import argparse
 
@@ -27,7 +28,7 @@ firefox_options = Options()
 firefox_options.add_argument("--headless")
 # Set the custom user agent
 firefox_options.set_preference("general.useragent.override", user_agent)
-driver = webdriver.Firefox(options=firefox_options)
+driver = webdriver.Firefox(options=firefox_options, service=Service("/usr/local/bin/geckodriver"))
 driver.get(args.target)
 time.sleep(10)
 # Get all cookies
