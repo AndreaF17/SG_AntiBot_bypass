@@ -27,6 +27,28 @@ To use this script, you'll need to have the following prerequisites installed:
 - Python 3.x
 - Selenium WebDriver for Firefox
 - requests library
+
+### Install GeckoDriver
+
+**Step 1:** Download GeckoDriver
+```bash
+wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
+```
+**Step 2:** Unzip the tar file
+```bash
+sudo tar -xvf geckodriver-v0.26.0-linux64.tar.gz
+```
+**Step 3:** Move GeckoDriver to binary location
+```bash
+sudo mv geckodriver /usr/local/bin/
+```
+**Step 4:** Make it executable
+```bash
+sudo chmod +x /usr/local/bin/geckodriver
+```
+
+GeckoDriver setup successful.
+
 1. Clone or download this repository.
 2. Install the required dependencies by running `pip install -r requirements.txt`.
 3. Update the `TARGET` variable in the script with your desired target URL.
